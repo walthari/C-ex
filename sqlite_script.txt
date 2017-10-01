@@ -1,0 +1,29 @@
+/* Introduction */
+
+CREATE TABLE test (id integer primary key, value test);
+INSERT INTO test (id, value) values(1, 'eenie');
+INSERT INTO test (id, value) values(2, 'meenie');
+INSERT INTO test (value) values('miny');
+INSERT INTO test (value) values ('mo');
+
+.mode column
+.headers on
+
+SELECT * FROM test;		/* select query for all columns */		
+SELECT title FROM movies
+WHERE id BETWEEN 1 AND 5;
+SELECT title FROM movies
+WHERE title LIKE "%Toy%";
+
+	
+SELECT last_insert_rowid();                          /* how to know the value of the last inserted id */
+
+CREATE INDEX test_idx ON test (value);               /* add an index */
+CREATE VIEW schema AS SELECT * FROM sqlite_master;   /* add a view */
+
+.tables        /* getting database schema information */
+.indices test  /* indices for our table */
+.schema        /* ddl */
+.mode column
+.headers on
+SELECT type, name, tbl_name, sql FROM sqlite_master ORDER BY type; /* querying sqlite_master */
