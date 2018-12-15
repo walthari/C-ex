@@ -1,5 +1,5 @@
 # if, for Statements and other stuff
-words = ['cat', 'window', 'international']
+words = ['dog', 'window', 'international']
 for w in words:
     print(w, len(w))
 
