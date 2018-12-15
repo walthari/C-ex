@@ -1,4 +1,4 @@
-# if, for Statements
+# if, for Statements and other stuff
 words = ['cat', 'window', 'international']
 for w in words:
     print(w, len(w))
